@@ -1,0 +1,7 @@
+{
+    "replace": false,
+    "values": [
+        "fzsd:module/scoreboard/assign/scoreboard/eat_food_points",
+        "#fzsd:module/scoreboard/assign/scoreboard/general/eat_food_points"
+    ]
+}

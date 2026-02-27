@@ -10,6 +10,8 @@
         "#fzsd:module/scoreboard/assign/scoreboard/general/fishing_count",
         "#fzsd:module/scoreboard/assign/scoreboard/general/kill_count",
         "#fzsd:module/scoreboard/assign/scoreboard/general/placement_count",
-        "#fzsd:module/scoreboard/assign/scoreboard/general/trade_count"
+        "#fzsd:module/scoreboard/assign/scoreboard/general/trade_count",
+        "#fzsd:module/scoreboard/assign/scoreboard/general/afk_time",
+        "#fzsd:module/scoreboard/assign/scoreboard/general/eat_food_points"
     ]
 }
