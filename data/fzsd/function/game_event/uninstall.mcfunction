@@ -5,6 +5,20 @@ scoreboard objectives remove fzsd.event.death_count
 scoreboard objectives remove fzsd.event.leave_game
 scoreboard objectives remove fzsd.event.play_ticks
 scoreboard objectives remove fzsd.event.villager_trade
+scoreboard objectives remove fzsd.event.afk.last_x
+scoreboard objectives remove fzsd.event.afk.last_y
+scoreboard objectives remove fzsd.event.afk.last_z
+scoreboard objectives remove fzsd.event.afk.last_yaw
+scoreboard objectives remove fzsd.event.afk.last_pitch
+scoreboard objectives remove fzsd.event.afk.idle_ticks
+scoreboard objectives remove fzsd.event.afk.curr_x
+scoreboard objectives remove fzsd.event.afk.curr_y
+scoreboard objectives remove fzsd.event.afk.curr_z
+scoreboard objectives remove fzsd.event.afk.curr_yaw
+scoreboard objectives remove fzsd.event.afk.curr_pitch
+scoreboard objectives remove fzsd.event.food.last
+scoreboard objectives remove fzsd.event.food.current
+scoreboard objectives remove fzsd.event.food.delta
 
 ## 使用工具
 scoreboard objectives remove fzsd.event.used_tool.dig_offset

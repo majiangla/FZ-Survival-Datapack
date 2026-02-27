@@ -11,6 +11,8 @@
         "fzsd:module/scoreboard/display/carousel/try_display/kill_count",
         "fzsd:module/scoreboard/display/carousel/try_display/placement_count",
         "fzsd:module/scoreboard/display/carousel/try_display/trade_count",
-        "fzsd.extra.bbl:display/carousel/try_display"
+        "fzsd.extra.bbl:display/carousel/try_display",
+        "fzsd:module/scoreboard/display/carousel/try_display/afk_time",
+        "fzsd:module/scoreboard/display/carousel/try_display/eat_food_points"
     ]
 }
