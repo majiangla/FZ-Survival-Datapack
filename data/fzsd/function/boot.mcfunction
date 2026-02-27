@@ -3,3 +3,4 @@ execute if data storage fzsd:version fzsd{need_update: 1b} run function fzsd:sys
 function fzsd:system/carpet/try_load_fzsd_score
 function #fzsd:load
 execute if score fzsd.logger.level fzsd.variable.integer matches ..500 run tellraw @a [{"nbt": "fzsd.level.info", "interpret": true, "storage": "fzsd:logger"}, {"text": "FZ Survival Data Pack，当前版本：", "color": "gold"}, {"nbt":"fzsd.version", "storage": "fzsd:version", "color": "red"}]
+execute if score fzsd.logger.level fzsd.variable.integer matches ..500 run tellraw @a [{"nbt": "fzsd.level.info", "interpret": true, "storage": "fzsd:logger"}, {"text": "MaJiangla修改"}]

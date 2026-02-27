@@ -57,3 +57,15 @@ function #fzsd:calculation/highest_id_add_1
 scoreboard players operation fzsd.module.scoreboard.display.id.placement_count fzsd.variable.integer = fzsd.module.scoreboard.display.highest_id fzsd.variable.integer
 ##### 日志
 execute if score fzsd.logger.level fzsd.variable.integer matches ..400 run tellraw @a [{"nbt": "fzsd.level.debug", "interpret": true, "storage": "fzsd:logger"}, {"text": "注册"}, {"nbt": "fzsd.module.scoreboard.text.placement_count", "interpret": true, "storage": "fzsd:module"}, {"text": "id为："}, {"score": {"name": "fzsd.module.scoreboard.display.id.placement_count", "objective": "fzsd.variable.integer"}}]
+
+#### 注册挂机榜计分板id
+function #fzsd:calculation/highest_id_add_1
+scoreboard players operation fzsd.module.scoreboard.display.id.afk_time fzsd.variable.integer = fzsd.module.scoreboard.display.highest_id fzsd.variable.integer
+##### 日志
+execute if score fzsd.logger.level fzsd.variable.integer matches ..400 run tellraw @a [{"nbt": "fzsd.level.debug", "interpret": true, "storage": "fzsd:logger"}, {"text": "注册"}, {"nbt": "fzsd.module.scoreboard.text.afk_time", "interpret": true, "storage": "fzsd:module"}, {"text": "id为："}, {"score": {"name": "fzsd.module.scoreboard.display.id.afk_time", "objective": "fzsd.variable.integer"}}]
+
+#### 注册进食榜计分板id
+function #fzsd:calculation/highest_id_add_1
+scoreboard players operation fzsd.module.scoreboard.display.id.eat_food_points fzsd.variable.integer = fzsd.module.scoreboard.display.highest_id fzsd.variable.integer
+##### 日志
+execute if score fzsd.logger.level fzsd.variable.integer matches ..400 run tellraw @a [{"nbt": "fzsd.level.debug", "interpret": true, "storage": "fzsd:logger"}, {"text": "注册"}, {"nbt": "fzsd.module.scoreboard.text.eat_food_points", "interpret": true, "storage": "fzsd:module"}, {"text": "id为："}, {"score": {"name": "fzsd.module.scoreboard.display.id.eat_food_points", "objective": "fzsd.variable.integer"}}]

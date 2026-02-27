@@ -20,6 +20,10 @@ scoreboard objectives remove fzsd.module.scoreboard.display.fishing_count
 scoreboard objectives remove fzsd.module.scoreboard.display.kill_count
 ### 交易榜
 scoreboard objectives remove fzsd.module.scoreboard.display.trade_count
+### 挂机榜
+scoreboard objectives remove fzsd.module.scoreboard.display.afk_time
+### 进食榜
+scoreboard objectives remove fzsd.module.scoreboard.display.eat_food_points
 
 ## 清除队伍
 ### 轮播
@@ -42,6 +46,10 @@ team remove fzsd.module.scoreboard.display.fishing_count
 team remove fzsd.module.scoreboard.display.kill_count
 ### 交易榜
 team remove fzsd.module.scoreboard.display.trade_count
+### 挂机榜
+team remove fzsd.module.scoreboard.display.afk_time
+### 进食榜
+team remove fzsd.module.scoreboard.display.eat_food_points
 
 ## 日志
 execute if score fzsd.logger.level fzsd.variable.integer matches ..500 run tellraw @a [{"nbt": "level.info", "interpret": true, "storage": "fzsd:logger"}, {"text": "已删除计分板数据！"}]
