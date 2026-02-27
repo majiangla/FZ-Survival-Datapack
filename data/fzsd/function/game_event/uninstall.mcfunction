@@ -11,7 +11,9 @@ scoreboard objectives remove fzsd.event.afk.last_z
 scoreboard objectives remove fzsd.event.afk.last_yaw
 scoreboard objectives remove fzsd.event.afk.last_pitch
 scoreboard objectives remove fzsd.event.afk.idle_ticks
+
 scoreboard objectives remove fzsd.event.afk.acc_ticks
+
 scoreboard objectives remove fzsd.event.afk.curr_x
 scoreboard objectives remove fzsd.event.afk.curr_y
 scoreboard objectives remove fzsd.event.afk.curr_z

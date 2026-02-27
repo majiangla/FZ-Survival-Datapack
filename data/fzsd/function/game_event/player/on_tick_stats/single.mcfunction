@@ -16,10 +16,12 @@ execute if score @s fzsd.event.afk.last_x = @s fzsd.event.afk.curr_x unless scor
 execute if score @s fzsd.event.afk.last_x = @s fzsd.event.afk.curr_x if score @s fzsd.event.afk.last_y = @s fzsd.event.afk.curr_y unless score @s fzsd.event.afk.last_z = @s fzsd.event.afk.curr_z run scoreboard players set @s fzsd.event.afk.idle_ticks 0
 execute if score @s fzsd.event.afk.last_x = @s fzsd.event.afk.curr_x if score @s fzsd.event.afk.last_y = @s fzsd.event.afk.curr_y if score @s fzsd.event.afk.last_z = @s fzsd.event.afk.curr_z unless score @s fzsd.event.afk.last_yaw = @s fzsd.event.afk.curr_yaw run scoreboard players set @s fzsd.event.afk.idle_ticks 0
 execute if score @s fzsd.event.afk.last_x = @s fzsd.event.afk.curr_x if score @s fzsd.event.afk.last_y = @s fzsd.event.afk.curr_y if score @s fzsd.event.afk.last_z = @s fzsd.event.afk.curr_z if score @s fzsd.event.afk.last_yaw = @s fzsd.event.afk.curr_yaw unless score @s fzsd.event.afk.last_pitch = @s fzsd.event.afk.curr_pitch run scoreboard players set @s fzsd.event.afk.idle_ticks 0
+
 execute if score @s fzsd.event.afk.idle_ticks matches 200.. run scoreboard players add @s fzsd.event.afk.acc_ticks 1
 execute if score @s fzsd.event.afk.idle_ticks matches ..199 run scoreboard players set @s fzsd.event.afk.acc_ticks 0
 execute if data storage fzsd:install fzsd.module{scoreboard:1b} if score @s fzsd.event.afk.acc_ticks matches 72000.. run function #fzsd:module/scoreboard/assign/scoreboard/afk_time
 execute if score @s fzsd.event.afk.acc_ticks matches 72000.. run scoreboard players remove @s fzsd.event.afk.acc_ticks 72000
+
 
 scoreboard players operation @s fzsd.event.afk.curr_x = @s fzsd.event.afk.last_x
 scoreboard players operation @s fzsd.event.afk.curr_y = @s fzsd.event.afk.last_y

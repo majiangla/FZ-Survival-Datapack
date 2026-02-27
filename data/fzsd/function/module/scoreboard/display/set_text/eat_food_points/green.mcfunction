@@ -5,3 +5,4 @@ scoreboard objectives setdisplay sidebar.team.green fzsd.module.scoreboard.displ
 scoreboard objectives modify fzsd.module.scoreboard.display.eat_food_points displayname {"text": "进食榜", "color": "green"}
 team modify fzsd.module.scoreboard.display.eat_food_points color green
 team modify fzsd.module.scoreboard.display.eat_food_points displayName {"text": "进食榜", "color": "green"}
+

@@ -13,7 +13,9 @@ scoreboard objectives add fzsd.event.afk.last_z dummy
 scoreboard objectives add fzsd.event.afk.last_yaw dummy
 scoreboard objectives add fzsd.event.afk.last_pitch dummy
 scoreboard objectives add fzsd.event.afk.idle_ticks dummy
+
 scoreboard objectives add fzsd.event.afk.acc_ticks dummy
+
 scoreboard objectives add fzsd.event.afk.curr_x dummy
 scoreboard objectives add fzsd.event.afk.curr_y dummy
 scoreboard objectives add fzsd.event.afk.curr_z dummy
