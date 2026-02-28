@@ -1,0 +1,7 @@
+{
+    "replace": false,
+    "values": [
+        "fzsd:module/scoreboard/assign/scoreboard/afk_time",
+        "#fzsd:module/scoreboard/assign/scoreboard/general/afk_time"
+    ]
+}

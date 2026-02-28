@@ -1,0 +1,1 @@
+execute if score fzsd.module.scoreboard.display.current_id fzsd.variable.integer = fzsd.module.scoreboard.display.id.eat_food_points fzsd.variable.integer run function fzsd:module/scoreboard/display/carousel/set_display/eat_food_points
