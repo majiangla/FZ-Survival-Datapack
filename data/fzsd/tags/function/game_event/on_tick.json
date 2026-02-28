@@ -1,6 +1,7 @@
 {
     "replace": false,
     "values": [
-        "fzsd:game_event/game/on_night/on_tick"
+        "fzsd:game_event/game/on_night/on_tick",
+        "fzsd:game_event/player/on_tick_stats"
     ]
 }

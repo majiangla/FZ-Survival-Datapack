@@ -24,3 +24,8 @@ execute if score @s fzsd.module.interactor.trigger matches -1110 if data storage
 execute if score @s fzsd.module.interactor.trigger matches -1110 unless data storage fzsd:perm {scoreboard:1} run function #fzsd:module/scoreboard/interactor/subscribe/placement_count
 execute if score @s fzsd.module.interactor.trigger matches -1120 if data storage fzsd:perm {scoreboard:1} if entity @s[tag=fzsd.admin] run function #fzsd:module/scoreboard/interactor/show_my_scores
 execute if score @s fzsd.module.interactor.trigger matches -1120 unless data storage fzsd:perm {scoreboard:1} run function #fzsd:module/scoreboard/interactor/show_my_scores
+
+execute if score @s fzsd.module.interactor.trigger matches -1130 if data storage fzsd:perm {scoreboard:1} if entity @s[tag=fzsd.admin] run function #fzsd:module/scoreboard/interactor/subscribe/afk_time
+execute if score @s fzsd.module.interactor.trigger matches -1130 unless data storage fzsd:perm {scoreboard:1} run function #fzsd:module/scoreboard/interactor/subscribe/afk_time
+execute if score @s fzsd.module.interactor.trigger matches -1140 if data storage fzsd:perm {scoreboard:1} if entity @s[tag=fzsd.admin] run function #fzsd:module/scoreboard/interactor/subscribe/eat_food_points
+execute if score @s fzsd.module.interactor.trigger matches -1140 unless data storage fzsd:perm {scoreboard:1} run function #fzsd:module/scoreboard/interactor/subscribe/eat_food_points
