@@ -51,6 +51,14 @@ team add fzsd.module.scoreboard.display.placement_count
 scoreboard objectives add fzsd.module.scoreboard.display.trade_count dummy
 team add fzsd.module.scoreboard.display.trade_count
 
+### 挂机榜
+scoreboard objectives add fzsd.module.scoreboard.display.afk_time dummy
+team add fzsd.module.scoreboard.display.afk_time
+
+### 进食榜
+scoreboard objectives add fzsd.module.scoreboard.display.eat_food_points dummy
+team add fzsd.module.scoreboard.display.eat_food_points
+
 team add fzsd.module.scoreboard.fake
 team add fzsd.module.scoreboard.shadow
 execute unless data storage fzsd:config fzsd.module.scoreboard{fake_player_prefix:false} run team modify fzsd.module.scoreboard.fake prefix {"text": "假的"}
