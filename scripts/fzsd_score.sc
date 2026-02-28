@@ -29,7 +29,7 @@ require_version(requirement) -> (
 //** 主要逻辑 **//
 
 global_app_name = system_info('app_name');
-global_app_version = '1.1-beta.1';
+global_app_version = '1.1-beta.3';
 global_carpet_version = split('\\+', system_info('scarpet_version')):0;
 global_current_scoreboard_list =  [
     'fzsd.module.scoreboard.display.activation',
@@ -41,7 +41,9 @@ global_current_scoreboard_list =  [
     'fzsd.module.scoreboard.display.trade_count',
     'fzsd.module.scoreboard.display.bedrock_broken_count',
     'fzsd.module.scoreboard.display.aviating_distance',
-    'fzsd.module.scoreboard.display.placement_count'
+    'fzsd.module.scoreboard.display.placement_count',
+    'fzsd.module.scoreboard.display.afk_time',
+    'fzsd.module.scoreboard.display.eat_food_points'
 ];
 global_generals_old = {
     'fzsd.module.scoreboard.display.damage_taken' -> '总受伤害量',
@@ -60,7 +62,9 @@ global_current_generals = {
     'fzsd.module.scoreboard.display.trade_count' -> '总交易数',
     'fzsd.module.scoreboard.display.bedrock_broken_count' -> '总破基岩数',
     'fzsd.module.scoreboard.display.aviating_distance' -> '总飞行距离',
-    'fzsd.module.scoreboard.display.placement_count' -> '总建造数'
+    'fzsd.module.scoreboard.display.placement_count' -> '总建造数',
+    'fzsd.module.scoreboard.display.afk_time' -> '总挂机时长',
+    'fzsd.module.scoreboard.display.eat_food_points' -> '总恢复饱食度'
 };
 
 __config() -> {
@@ -219,12 +223,23 @@ reload_configs() -> (
     );
 );
 
+
+// 是否为在线假人/影子玩家（仅在线可判定）
+is_fake_or_shadow_player(player_name) -> (
+    p = player(player_name);
+    if(p == null,
+        return(false);
+    );
+    t = p ~ 'player_type';
+    return(t == 'fake' || t == 'shadow');
+);
+
 // 获取所有计分板下的所有玩家列表
 get_scoreboard_player_list() -> (
     set = m();
     for(global_current_scoreboard_list, 
         for(scoreboard(_),
-            if(_ ~ '\\w',
+            if(_ ~ '\\w' && !is_fake_or_shadow_player(_),
                 put(set:_, null);
             );
         );
@@ -310,6 +325,10 @@ _recalculate_general(scoreboard_id) -> (
     total_score = 0;
     for(scoreboard(scoreboard_id),
     ( // _ = player_name
+        if(is_fake_or_shadow_player(_),(
+            scoreboard_remove(scoreboard_id, _);
+            continue();
+        ));
         score = scoreboard(scoreboard_id, _);
         if(score <= 0,(
             scoreboard_remove(scoreboard_id, _);
@@ -422,6 +441,16 @@ _restore_score(player_name, scoreboard_id) -> (
         (
             scoreboard(scoreboard_id, player, 0);
             for(block_list(), append_from_stat(scoreboard_id, player, 'used', _));
+        ),
+        scoreboard_id == 'fzsd.module.scoreboard.display.afk_time',
+        (
+            // 无法从原版统计精准恢复“挂机时长（h）”，仅保持现有分数
+            return(false);
+        ),
+        scoreboard_id == 'fzsd.module.scoreboard.display.eat_food_points',
+        (
+            // 无法从原版统计精准恢复“恢复饱食度点数”，仅保持现有分数
+            return(false);
         ),
         print('未识别的计分板ID！' + scoreboard_id);
         return(false);

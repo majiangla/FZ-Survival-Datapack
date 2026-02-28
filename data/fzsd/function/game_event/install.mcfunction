@@ -6,6 +6,22 @@ scoreboard objectives add fzsd.event.leave_game minecraft.custom:leave_game
 ### 由 #fzsd:game_event/on_tick 赋值
 scoreboard objectives add fzsd.event.play_ticks dummy
 scoreboard objectives add fzsd.event.villager_trade minecraft.custom:traded_with_villager
+## AFK与进食统计
+scoreboard objectives add fzsd.event.afk.last_x dummy
+scoreboard objectives add fzsd.event.afk.last_y dummy
+scoreboard objectives add fzsd.event.afk.last_z dummy
+scoreboard objectives add fzsd.event.afk.last_yaw dummy
+scoreboard objectives add fzsd.event.afk.last_pitch dummy
+scoreboard objectives add fzsd.event.afk.idle_ticks dummy
+scoreboard objectives add fzsd.event.afk.acc_ticks dummy
+scoreboard objectives add fzsd.event.afk.curr_x dummy
+scoreboard objectives add fzsd.event.afk.curr_y dummy
+scoreboard objectives add fzsd.event.afk.curr_z dummy
+scoreboard objectives add fzsd.event.afk.curr_yaw dummy
+scoreboard objectives add fzsd.event.afk.curr_pitch dummy
+scoreboard objectives add fzsd.event.food.last dummy
+scoreboard objectives add fzsd.event.food.current dummy
+scoreboard objectives add fzsd.event.food.delta dummy
 
 ## 使用工具
 scoreboard objectives add fzsd.event.used_tool.dig_offset dummy
